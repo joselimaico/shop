@@ -1,9 +1,22 @@
+import { notFound } from "next/navigation";
 
+interface Props {
+  params :{
+    id: string;
+  }
+}
 
-export default function () {
+export default function ({params}:Props) {
+
+  const {id} = params;
+
+  if(id ==="kids"){
+    notFound();
+  }
+
   return (
     <div className="">
-      <h1>category Page</h1>
+      <h1>category Page {id} </h1>
     </div>
   );
 }
