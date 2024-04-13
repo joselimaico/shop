@@ -1,6 +1,9 @@
-import { Title } from "@/components";
+import { ProductGrid, Title } from "@/components";
+import { initialData } from "@/seed/seed";
 
 export default function Home() {
+  const products = initialData.products;
+
   return (
     <>
      <Title
@@ -8,6 +11,9 @@ export default function Home() {
         subtitle="Todos los productos"
         className="mb-2"
       /> 
+      <ProductGrid 
+        products={ products }
+      />
     </>
   );
 }
